@@ -1,0 +1,29 @@
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Ca2LeeCam.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Ca2LeeCam.pdb
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Assembly-CSharp.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\UnityEngine.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\UnityEngine.UI.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\KSPTrackIR.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\KSPAssets.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Mono.Cecil.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Ionic.Zip.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\TDx.TDxInput.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\RedShellSDK.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\Ca2LeeCam.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\Ca2LeeCam.pdb
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\CA2_LEE_CAM.csprojResolveAssemblyReference.cache
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Ca2LeeCam.dll
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Ca2LeeCam.pdb
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\Ca2LeeCam.dll
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\Ca2LeeCam.pdb
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\CA2_LEE_CAM.csprojAssemblyReference.cache
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\CA2_LEE_CAM.csproj.CoreCompileInputs.cache
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\CA2_LEE_CAM.csproj.CopyComplete
+E:\_Trufiadok\KSP\Development\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Ca2LeeCam.dll
+E:\_Trufiadok\KSP\Development\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\bin\Debug\Ca2LeeCam.pdb
+E:\_Trufiadok\KSP\Development\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\CA2_LEE_CAM.csprojAssemblyReference.cache
+E:\_Trufiadok\KSP\Development\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\CA2_LEE_CAM.csproj.CoreCompileInputs.cache
+E:\_Trufiadok\KSP\Development\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\CA2_LEE_CAM.csproj.CopyComplete
+E:\_Trufiadok\KSP\Development\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\Ca2LeeCam.dll
+E:\_Trufiadok\KSP\Development\CA2_LEE_CAM\CA2_LEE_CAM\CA2_LEE_CAM\obj\Debug\Ca2LeeCam.pdb

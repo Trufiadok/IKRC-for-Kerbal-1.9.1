@@ -1,0 +1,26 @@
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\VirtualMagnet.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\VirtualMagnet.pdb
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\Assembly-CSharp.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\UnityEngine.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\UnityEngine.UI.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\KSPTrackIR.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\KSPAssets.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\Mono.Cecil.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\Ionic.Zip.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\TDx.TDxInput.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\VirtualMagnet.csprojResolveAssemblyReference.cache
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\VirtualMagnet.dll
+D:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\VirtualMagnet.pdb
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\WireSnareLock.dll
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\WireSnareLock.pdb
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\WireSnareLock.dll
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\WireSnareLock.pdb
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\VirtualMagnet.csprojAssemblyReference.cache
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\VirtualMagnet.csproj.CoreCompileInputs.cache
+E:\_Trufiadok\KSP\Development\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\WireSnareLock.dll
+E:\_Trufiadok\KSP\Development\VirtualMagnet\VirtualMagnet\VirtualMagnet\bin\Debug\WireSnareLock.pdb
+E:\_Trufiadok\KSP\Development\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\VirtualMagnet.csprojAssemblyReference.cache
+E:\_Trufiadok\KSP\Development\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\VirtualMagnet.csproj.CoreCompileInputs.cache
+E:\_Trufiadok\KSP\Development\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\WireSnareLock.dll
+E:\_Trufiadok\KSP\Development\VirtualMagnet\VirtualMagnet\VirtualMagnet\obj\Debug\WireSnareLock.pdb

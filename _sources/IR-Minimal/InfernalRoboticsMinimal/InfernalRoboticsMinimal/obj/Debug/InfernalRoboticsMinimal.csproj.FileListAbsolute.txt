@@ -1,0 +1,21 @@
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\IRMin.dll
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\IRMin.pdb
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\InfernalRoboticsMinimal.csproj.CoreCompileInputs.cache
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\IRMin.dll
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\IRMin.pdb
+H:\_Trufiadok\KSP\TRF_Base\_Unity Projects\Unity Project 2017\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\InfernalRoboticsMinimal.csprojAssemblyReference.cache
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\InfernalRoboticsMinimal.csproj.CoreCompileInputs.cache
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\IRMin.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\IRMin.pdb
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\IRMin.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\IRMin.pdb
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\Unity.RenderPipelines.Core.Runtime.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\Unity.RenderPipelines.Core.ShaderLibrary.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\UnityEngine.AudioModule.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\UnityEngine.CoreModule.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\UnityEngine.IMGUIModule.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\UnityEngine.InputLegacyModule.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\UnityEngine.PhysicsModule.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\bin\Debug\UnityEngine.UIModule.dll
+E:\_Trufiadok\KSP\Development\IR-Minimal\InfernalRoboticsMinimal\InfernalRoboticsMinimal\obj\Debug\InfernalRoboticsMinimal.csproj.CopyComplete

@@ -1,0 +1,297 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using KSP.IO;
+
+namespace CA2_LEE_CAM
+{
+    [KSPAddon(KSPAddon.Startup.Flight, false)]
+    public class Ca2LeeCam : PartModule
+    {
+        private static Rect windowRectangle;
+        private static Vector2 windowPosition = new Vector2(10, 10);
+        private static Vector2 windowBorder = new Vector2(10, 10);
+        private static float windowTitle = 15f;
+        private static Vector2 renderSize = new Vector2(401, 301);
+
+        internal Rect TexturePosition;
+        protected RenderTexture RenderTexture;
+        public static Texture2D texLEEHUD = null;
+
+        protected static UnityEngine.Camera eeCamera = new UnityEngine.Camera();
+        protected static string eeCameraName = "EEcamera";
+
+        protected static Transform cameraPositionTransform;
+
+        private static bool clcWindowActive = true;
+        private static ConfigNode nodeInner;
+
+        private static float Yoffset;
+
+
+        protected List<UnityEngine.Camera> AllCameras = new List<UnityEngine.Camera>();
+        protected List<GameObject> AllCamerasGameObject = new List<GameObject>();
+        protected List<string> CameraNames = new List<string> { "GalaxyCamera", "Camera ScaledSpace", "Camera 01", "Camera 00" };
+
+        [KSPEvent(guiActive = true, guiName = "Turn on Ca2LeeCam")]
+        public void TurnOnCLCEvent()
+        {
+            // This will hide the TurnOnCLCEvent event, and show the TurnOffCLCEvene event.
+            Events["TurnOnCLCEvent"].active = false;
+            Events["TurnOffCLCEvent"].active = true;
+            clcWindowActive = true;
+        }
+
+        [KSPEvent(guiActive = true, guiName = "Turn off Ca2LeeCam", active = false)]
+        public void TurnOffCLCEvent()
+        {
+            // This will hide the TurnOffCLCEven event, and show the TurnOnCLCEvent event.
+            Events["TurnOnCLCEvent"].active = true;
+            Events["TurnOffCLCEvent"].active = false;
+            clcWindowActive = false;
+            OnSave(nodeInner);
+        }
+
+        public override void OnSave(ConfigNode node)
+        {
+            PluginConfiguration config = PluginConfiguration.CreateForType<Ca2LeeCam>();
+
+            windowPosition.x = windowRectangle.x;
+            windowPosition.y = windowRectangle.y;
+            config.SetValue("CLC Window Position", windowPosition);
+            config.save();
+        }
+
+        public override void OnLoad(ConfigNode node)
+        {
+            PluginConfiguration config = PluginConfiguration.CreateForType<Ca2LeeCam>();
+
+            config.load();
+            windowPosition = config.GetValue<Vector2>("CLC Window Position");
+            windowRectangle = new Rect(windowPosition.x, windowPosition.y, renderSize.x + 2 * windowBorder.x, renderSize.y + 2 * windowBorder.y + windowTitle);
+            clcWindowActive = false;
+            nodeInner = node;
+        }
+
+        public void OnDisable()
+        {
+            clcWindowActive = false;
+        }
+
+        public void Destroy()
+        {
+            clcWindowActive = false;
+        }
+
+        public void Start()
+        {
+            Debug.Log(string.Format("[TRF CLC] {0} START InitTexture()", 1));
+            InitTexture();
+            Debug.Log(string.Format("[TRF CLC] {0} END InitTexture()", 2));
+            Debug.Log(string.Format("[TRF CLC] {0} START InitCamera()", 3));
+            //InitCamera();
+            InitCameras();
+            Debug.Log(string.Format("[TRF CLC] {0} END InitCamera()", 4));
+            Debug.Log(string.Format("[TRF CLC] {0} START LoadPNG()", 5));
+            string pngPath = KSPUtil.ApplicationRootPath + "GameData/Ca2LeeCam/PNGs/";
+            texLEEHUD = LoadPNG(pngPath + "leehud real.png");
+            Debug.Log(string.Format("[TRF CLC] {0} END LoadPNG()", 6));
+            Debug.Log(string.Format("[TRF CLC] {0} START set cameraPositionTransform", 7));
+            cameraPositionTransform = FindChildTransformRecursive("CamExt", part.transform);
+            if (cameraPositionTransform == null)
+            {
+                Debug.Log(string.Format("[TRF CLC] {0} 'CamExt' transform not found", 8));
+                cameraPositionTransform = part.transform;
+            }
+            Debug.Log(string.Format("[TRF CLC] {0} END set cameraPositionTransform", 9));
+            Debug.Log(string.Format("[TRF CLC] {0} START set windowRectangle", 10));
+            windowRectangle = new Rect(windowPosition.x, windowPosition.y, renderSize.x + 2 * windowBorder.x, renderSize.y + 2 * windowBorder.y + windowTitle);
+            Debug.Log(string.Format("[TRF CLC] {0} END set windowRectangle", 11));
+        }
+
+        void Update()
+        {
+            if (clcWindowActive)
+            {
+                //Debug.Log(string.Format("[TRF CLC] {0} clcWindowActive = true", 12));
+                //Debug.Log(string.Format("[TRF CLC] {0} START set eeCamera.transform.position", 13));
+                //eeCamera.transform.position = cameraPositionTransform.position;
+                //eeCamera.transform.rotation = cameraPositionTransform.rotation;
+
+
+                AllCamerasGameObject.Last().transform.position = cameraPositionTransform.position;
+                AllCamerasGameObject.Last().transform.rotation = cameraPositionTransform.rotation;
+
+                //Debug.Log(string.Format("[TRF CLC] {0} END set eeCamera.transform.position", 14));
+                //Debug.Log(string.Format("[TRF CLC] {0} START eeCamera.transform.Rotate()", 15));
+                //eeCamera.transform.Rotate(new Vector3(1f, 0, 0f), 90f);
+                //eeCamera.transform.Rotate(new Vector3(0, 0, 1f), 180f);
+
+                //AllCamerasGameObject.Last().transform.Rotate(new Vector3(1f, 0, 0f), 90f);
+                //AllCamerasGameObject.Last().transform.Rotate(new Vector3(0, 0, 1f), 180f);
+
+                //Debug.Log(string.Format("[TRF CLC] {0} END eeCamera.transform.Rotate()", 1));
+
+
+                AllCamerasGameObject[0].transform.rotation = AllCamerasGameObject.Last().transform.rotation;
+                AllCamerasGameObject[1].transform.rotation = AllCamerasGameObject.Last().transform.rotation;
+                AllCamerasGameObject[2].transform.rotation = AllCamerasGameObject.Last().transform.rotation;
+                AllCamerasGameObject[2].transform.position = AllCamerasGameObject.Last().transform.position;
+            }
+        }
+
+        private void OnGUI()
+        {
+            if (clcWindowActive)
+            {
+                // Debug.Log(string.Format("[TRF CLC] {0} clcWindowActive = true", 16));
+                // Debug.Log(string.Format("[TRF CLC] {0} START GUILayout.Window()", 17));
+                // Draw window
+                windowRectangle = GUILayout.Window(20, windowRectangle, OnWindow, "CA2 Lee Camera");
+                // Debug.Log(string.Format("[TRF CLC] {0} END GUILayout.Window()", 18));
+            }
+        }
+
+        private void OnWindow(int windowID)
+        {
+            GUILayout.BeginHorizontal();
+
+            // Close window button
+            if (GUI.Button(new Rect((renderSize.x + 2 * windowBorder.x) - 20f, 3, 17, 15), "x"))
+            {
+                clcWindowActive = false;
+                // This will hide the TurnOffCLCEven event, and show the TurnOnCLCEvent event.
+                Events["TurnOnCLCEvent"].active = true;
+                Events["TurnOffCLCEvent"].active = false;
+                clcWindowActive = false;
+                OnSave(nodeInner);
+            }
+
+            if (Event.current.type.Equals(EventType.Repaint))
+                Graphics.DrawTexture(TexturePosition, Render(), null);
+
+            //GUI.DrawTexture(TexturePosition, texLEEHUD);
+
+            //Yoffset = 0;
+            //Rect inputRect = new Rect(20, 40, 40, 20);
+            //AddOutputValue(inputRect, "eePosition", eeCamera.transform.position, 110f, 110f);
+            //AddOutputValue(inputRect, "eeRotation", eeCamera.transform.rotation.eulerAngles, 110f, 110f);
+
+            GUILayout.EndHorizontal();
+
+            GUI.DragWindow();
+        }
+
+        protected virtual RenderTexture Render()
+        {
+            //eeCamera.Render();
+            AllCameras.ForEach(a => a.Render());
+            return RenderTexture;
+        }
+
+        protected virtual void InitTexture()
+        {
+            TexturePosition = new Rect(windowBorder.x, windowBorder.y + windowTitle, renderSize.x, renderSize.y);
+            RenderTexture = new RenderTexture((int)renderSize.x, (int)renderSize.y, 24);
+            RenderTexture.active = RenderTexture;
+            RenderTexture.Create();
+        }
+
+        protected virtual void InitCamera()
+        {
+            eeCamera = new GameObject().AddComponent<UnityEngine.Camera>();
+            eeCamera.name = eeCameraName;
+            eeCamera.targetTexture = RenderTexture;
+            eeCamera.rect = new Rect(0, 0, 4.01f, 3.01f);
+        }
+
+        protected virtual void InitCameras()
+        {
+            foreach (Camera cam in Camera.allCameras)
+            {
+                Debug.Log(string.Format("[TRF CLC] {0} cam.name " + cam.name, 50));
+            }
+
+
+            AllCamerasGameObject = CameraNames.Select(a => new GameObject()).ToList();
+            AllCameras = AllCamerasGameObject.Select((go, i) =>
+            {
+                var camera = go.AddComponent<UnityEngine.Camera>();
+                var cameraExample = UnityEngine.Camera.allCameras.FirstOrDefault(cam => cam.name == CameraNames[i]);
+                if (cameraExample != null)
+                {
+                    Debug.Log(string.Format("[TRF CLC] {0} cameraExample.name " + cameraExample.name, 100));
+                    camera.CopyFrom(cameraExample);
+                    camera.name = string.Format("{1} copy of {0}", CameraNames[i], 0);
+                    camera.targetTexture = RenderTexture;
+                }
+                return camera;
+            }).ToList();
+
+            foreach (Camera cam in AllCameras)
+            {
+                Debug.Log(string.Format("[TRF CLC] {0} cam.name " + cam.name, 200));
+            }
+        }
+
+        private Transform FindChildTransformRecursive(string objName, Transform obj)
+        {
+            Transform end = null;
+
+            if (null == obj)
+                return null;
+
+            if (end != null)
+                return end;
+
+            foreach (Transform child in obj)
+            {
+                if (null == child)
+                    continue;
+                if (child.name == objName)
+                {
+                    end = child.transform;
+                    break;
+                }
+                end = FindChildTransformRecursive(objName, child);
+            }
+            return end;
+        }
+
+        public static Texture2D LoadPNG(string filePath)
+        {
+            Texture2D tex = null;
+            byte[] fileData;
+
+            if (System.IO.File.Exists(filePath))
+            {
+                fileData = System.IO.File.ReadAllBytes(filePath);
+                tex = new Texture2D(2, 2);
+                tex.LoadImage(fileData); // .. this will auto-resize the texture dimensions.
+            }
+            return tex;
+        }
+
+        private string VectorToString(Vector3 vector, string format)
+        {
+            string szoveg = "";
+
+            szoveg = string.Format("( " + vector.x.ToString(format) + ", " + vector.y.ToString(format) + ", " + vector.z.ToString(format) + " )");
+
+            return szoveg;
+        }
+
+        private void AddOutputValue(Rect rectangle, string name, Vector3 valueVector3, float labelLength, float fieldLength)
+        {
+            GUI.Label(new Rect(rectangle.x, rectangle.y + Yoffset, labelLength, rectangle.height), name);
+            GUI.TextField(new Rect(rectangle.x + labelLength, rectangle.y + Yoffset, rectangle.width + fieldLength, rectangle.height), VectorToString(valueVector3, "0.00"));
+            Yoffset += 20f;
+        }
+    }
+}
