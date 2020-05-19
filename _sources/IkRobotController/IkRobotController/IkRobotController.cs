@@ -2302,6 +2302,9 @@ namespace IkRobotController
 
             ridbtList = new List<BoolText>();
 
+            ThetascrollPosition = new Vector2(0f, 0f);
+            indepServo = new List<IKservo>();
+
             ArmMaxLength = workingRange;
             ArmMaxLengthString = workingRange.ToString();
             MaxPosErrString = MaxPosErr.ToString();
@@ -4177,82 +4180,82 @@ namespace IkRobotController
                     LineDiagram(gradientDiagramRectangle, gradientData, debugColor);
                 }
                 #endregion window extender
-
-                using (var scrollScope = new GUI.ScrollViewScope(new Rect(10, 361, 190, 162), ThetascrollPosition, new Rect(0, 0, (10 + 20), (float)((JointList.Length - 1 + indepServo.Count) * 20 + 2)), false, true))
+                
+                using (var scrollScope = new GUI.ScrollViewScope(new Rect(10, 361, 190, 160), ThetascrollPosition, new Rect(0, 0, (10 + 20), (float)((JointList.Length - 1 + indepServo.Count) * 20 + 2)), false, true))
                 {
                     ThetascrollPosition = scrollScope.scrollPosition;
 
-                    #region Theta values
-                    // Theta values
-                    Yoffset = 0;
-                    inputRect = new Rect(1, 2, 50, 20);
-                    for (int i = 0; i < (JointList.Length - 1); i++)
-                    {
-                        if (IK_active)
-                            AddOutputValue(inputRect, "Ɵ[" + i.ToString() + "]", theta[i], 47f);
-                        else
+                        #region Theta values
+                        // Theta values
+                        Yoffset = 0;
+                        inputRect = new Rect(1, 2, 50, 20);
+                        for (int i = 0; i < (JointList.Length - 1); i++)
                         {
-                            thetaString[i] = theta[i].ToString("0.000");
-                            AddInputValue(inputRect, thetaString[i], out thetaString[i], "Ɵ[" + i.ToString() + "]", out theta[i], 47f);
-                            theta[i] = Mathf.Clamp(theta[i], ArmIkServos[i].MinAngle, ArmIkServos[i].MaxAngle);
-                        }
-                    }
-                    float valueOffset = Yoffset;
-
-                    // Control buttons of theta
-                    Yoffset = 0;
-                    inputRect = new Rect(27, 2, 20, 20);
-                    for (int i = 0; i < (JointList.Length - 1); i++)
-                    {
-                        if (IK_active)
-                            AddRepeatButton(inputRect, "◄");
-                        else
-                        {
-                            if (AddRepeatButton(inputRect, "◄"))
+                            if (IK_active)
+                                AddOutputValue(inputRect, "Ɵ[" + i.ToString() + "]", theta[i], 47f);
+                            else
                             {
-                                theta[i] = theta[i] - 0.25f * rotStep;
+                                thetaString[i] = theta[i].ToString("0.000");
+                                AddInputValue(inputRect, thetaString[i], out thetaString[i], "Ɵ[" + i.ToString() + "]", out theta[i], 47f);
                                 theta[i] = Mathf.Clamp(theta[i], ArmIkServos[i].MinAngle, ArmIkServos[i].MaxAngle);
-                                //Debug.Log(string.Format("[IKRC] OnWindow() - {0}. - MinAngle = {1} ({3}) MaxAngle = {2}", i, SortIkServo[i].MinAngle, SortIkServo[i].MaxAngle, theta[i]));
                             }
                         }
+                        float valueOffset = Yoffset;
 
-                    }
-                    float cb1Offset = Yoffset;
-
-                    Yoffset = 0;
-                    inputRect = new Rect(99, 2, 20, 20);
-                    for (int i = 0; i < (JointList.Length - 1); i++)
-                    {
-                        if (IK_active)
-                            AddRepeatButton(inputRect, "►");
-                        else
+                        // Control buttons of theta
+                        Yoffset = 0;
+                        inputRect = new Rect(27, 2, 20, 20);
+                        for (int i = 0; i < (JointList.Length - 1); i++)
                         {
-                            if (AddRepeatButton(inputRect, "►"))
+                            if (IK_active)
+                                AddRepeatButton(inputRect, "◄");
+                            else
                             {
-                                theta[i] = theta[i] + 0.25f * rotStep;
-                                theta[i] = Mathf.Clamp(theta[i], ArmIkServos[i].MinAngle, ArmIkServos[i].MaxAngle);
-                                //Debug.Log(string.Format("[IKRC] OnWindow() - {0}. - MinAngle = {1} ({3}) MaxAngle = {2}", i, SortIkServo[i].MinAngle, SortIkServo[i].MaxAngle, theta[i]));
+                                if (AddRepeatButton(inputRect, "◄"))
+                                {
+                                    theta[i] = theta[i] - 0.25f * rotStep;
+                                    theta[i] = Mathf.Clamp(theta[i], ArmIkServos[i].MinAngle, ArmIkServos[i].MaxAngle);
+                                    //Debug.Log(string.Format("[IKRC] OnWindow() - {0}. - MinAngle = {1} ({3}) MaxAngle = {2}", i, SortIkServo[i].MinAngle, SortIkServo[i].MaxAngle, theta[i]));
+                                }
+                            }
+
+                        }
+                        float cb1Offset = Yoffset;
+
+                        Yoffset = 0;
+                        inputRect = new Rect(99, 2, 20, 20);
+                        for (int i = 0; i < (JointList.Length - 1); i++)
+                        {
+                            if (IK_active)
+                                AddRepeatButton(inputRect, "►");
+                            else
+                            {
+                                if (AddRepeatButton(inputRect, "►"))
+                                {
+                                    theta[i] = theta[i] + 0.25f * rotStep;
+                                    theta[i] = Mathf.Clamp(theta[i], ArmIkServos[i].MinAngle, ArmIkServos[i].MaxAngle);
+                                    //Debug.Log(string.Format("[IKRC] OnWindow() - {0}. - MinAngle = {1} ({3}) MaxAngle = {2}", i, SortIkServo[i].MinAngle, SortIkServo[i].MaxAngle, theta[i]));
+                                }
                             }
                         }
-                    }
-                    float cb2Offset = Yoffset;
+                        float cb2Offset = Yoffset;
 
-                    // Theta current values
-                    Yoffset = 0;
-                    inputRect = new Rect(99, 2, 50, 20);
-                    for (int i = 0; i < (JointList.Length - 1); i++)
-                    {
-                        //AddOutputValue(inputRect, "Ɵ[" + i.ToString() + "]", currentTheta[i], 30f);
-                        AddOutputValue(inputRect, "", currentTheta[i], 20f);
-                    }
-                    float currentValueOffset = Yoffset;
+                        // Theta current values
+                        Yoffset = 0;
+                        inputRect = new Rect(99, 2, 50, 20);
+                        for (int i = 0; i < (JointList.Length - 1); i++)
+                        {
+                            //AddOutputValue(inputRect, "Ɵ[" + i.ToString() + "]", currentTheta[i], 30f);
+                            AddOutputValue(inputRect, "", currentTheta[i], 20f);
+                        }
+                        float currentValueOffset = Yoffset;
 
-                    //Theta blocker
-                    //for (int i = 0; i < (JointList.Length - 1); i++)
-                    //{
-                    //    blocking[i] = GUI.Toggle(new Rect(92, 365 + (i * 20), 20, 20), blocking[i], "");
-                    //}
-                    #endregion Theta values
+                        //Theta blocker
+                        //for (int i = 0; i < (JointList.Length - 1); i++)
+                        //{
+                        //    blocking[i] = GUI.Toggle(new Rect(92, 365 + (i * 20), 20, 20), blocking[i], "");
+                        //}
+                        #endregion Theta values
 
                     #region IndepServo values
                     if (HasIndependentServos)
@@ -4313,7 +4316,7 @@ namespace IkRobotController
                     }
                     #endregion IndepServo values
                 }
-
+            
                 #region Debug Text
                 //string dbgText = String.Format("{0} {1}", VectorToString(SortIkServo[0].fkParams.Axis, "0.00"), VectorToString(JointsRealAxis[0], "0"));
                 //GUI.Label(new Rect(20, 500, 290, 20), dbgText);
