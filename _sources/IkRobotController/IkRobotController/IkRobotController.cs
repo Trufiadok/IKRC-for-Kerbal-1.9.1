@@ -3477,6 +3477,8 @@ namespace IkRobotController
                 }
 
                 ircWindowActive = true;
+
+                Debug.Log("[IKRC] TurnOnIKRCEvent()");
             }
         }
 
@@ -3487,7 +3489,7 @@ namespace IkRobotController
             Events["TurnOnIKRCEvent"].active = true;
             Events["TurnOffIKRCEvent"].active = false;
             ircWindowActive = false;
-            //Debug.Log("[IKRC] TurnOffIKRCEvent()}");
+            Debug.Log("[IKRC] TurnOffIKRCEvent()");
             SetWinParamsToBuffer();
             OnSave(nodeInner);
         }
