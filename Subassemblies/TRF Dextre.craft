@@ -1,0 +1,3006 @@
+ship = TRF Dextre
+version = 1.9.1
+description = No Description.
+type = None
+size = 4.68773556,3.28639221,2.61764407
+steamPublishedFileId = 0
+persistentId = 1706117940
+rot = 0,0,0,0
+missionFlag = 
+vesselType = Debris
+OverrideDefault = False,False,False,False
+OverrideActionControl = 0,0,0,0
+OverrideAxisControl = 0,0,0,0
+OverrideGroupNames = ,,,
+PART
+{
+	part = TRF.SPDM.PDGF.wT_4294597376
+	partName = Part
+	persistentId = 1307444897
+	pos = 0.188147396,14.7390223,0.390496731
+	attPos = 0,0,0
+	attPos0 = 0.188147396,14.7390223,0.390496731
+	rot = 0,-0.793353379,0,-0.60876143
+	attRot = 0,-0.793353379,0,-0.60876143
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.UpperStage_4294596584
+	attN = top,Null_0_0|0.128999993|0_0|1.03199995|0_0|0.128999993|0_0|1.03199995|0
+	attN = bottom,TRF.UpperStage_4294596584_0|-0.0309599973|0_0|-1.03199995|0_0|-0.0309599973|0_0|-1.03199995|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		acquireForceTweak = 100
+		crossfeed = True
+		stagingEnabled = False
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+			}
+			ToggleXFeedAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.UpperStage_4294596584
+	partName = Part
+	persistentId = 3488123298
+	pos = 0.188147396,14.7080622,0.390496731
+	attPos = 0,0,0
+	attPos0 = 0,-0.030960083,0
+	rot = -0.683012784,0.18301259,-0.18301259,-0.683012784
+	attRot = 0.653281569,-0.270597965,0.270597965,0.653281569
+	attRot0 = 0.270598173,-0.65328145,0.65328145,0.270598173
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ShoulderBase1_4294595720
+	link = TRF.ShoulderBase2_4294591656
+	link = TRF.BodyRollJoint_4294586356
+	attN = next,TRF.BodyRollJoint_4294586356_0|0|1.14512599_0|0|0.674000025_0|0|1.14512599_0|0|0.674000025
+	attN = base,TRF.SPDM.PDGF.wT_4294597376_0|0|0_0|0|-0.674000025_0|0|0_0|0|-0.674000025
+	attN = arm1,TRF.ShoulderBase1_4294595720_0.684784055|0|0.986736_0.476518035|0|-0.476518035_0.684784055|0|0.986736_0.476518035|0|-0.476518035
+	attN = arm2,TRF.ShoulderBase2_4294591656_-0.684784055|0|0.986736_-0.476518035|0|-0.476518035_-0.684784055|0|0.986736_-0.476518035|0|-0.476518035
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = TRF.ShoulderBase1_4294595720
+	partName = Part
+	persistentId = 4132338476
+	pos = 0.781189084,13.7213249,0.732889116
+	attPos = 0,0,0
+	attPos0 = 0.684784174,0,0.986736298
+	rot = 0.099045679,0.239117354,-0.369643837,-0.892399192
+	attRot = -0.49999994,-0.49999994,-0.49999994,-0.49999994
+	attRot0 = -0.65328151,0.270598054,0.270598054,0.65328151
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ShoulderRoll1_4294595674
+	attN = next,TRF.ShoulderRoll1_4294595674_0.0431360006|0|0_0.674000025|0|0_0.0431360006|0|0_0.674000025|0|0
+	attN = base,TRF.UpperStage_4294596584_0|0|0_-0.674000025|0|0_0|0|0_-0.674000025|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IkRobotController
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		activeControlPointName = _default
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10000
+		maxAmount = 10000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = TRF.ShoulderRoll1_4294595674
+	partName = Part
+	persistentId = 172157337
+	pos = 0.807604432,13.7518263,0.748140156
+	attPos = 0,0,0
+	attPos0 = 0.0431358144,-3.78116908E-07,3.72528874E-09
+	rot = -0.701057434,-0.430459291,0.0922962427,0.560985804
+	attRot = 0,0,0.707106709,0.707106709
+	attRot0 = 0.707106709,6.99260916E-09,-5.26120196E-08,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ShoulderYaw1_4294595620
+	attN = next,TRF.ShoulderYaw1_4294595620_0.260163993|-0.0950340033|0.0235900003_0|0.674000025|0_0.260163993|-0.0950340033|0.0235900003_0|0.674000025|0
+	attN = base,TRF.ShoulderBase1_4294595720_0|0|0_-0.674000025|0|0_0|0|0_-0.674000025|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFShoulderRoll1
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.ShoulderYaw1_4294595620
+	partName = Part
+	persistentId = 914470565
+	pos = 0.869582295,13.9567614,0.983937919
+	attPos = 0,0,0
+	attPos0 = 0.266230017,-0.173217773,0.0235900171
+	rot = -0.892399251,0.369643897,-0.239117354,0.0990456119
+	attRot = -0.49999994,0.49999994,-0.49999994,-0.49999994
+	attRot0 = -0.5,0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ShoulderPitch1_4294595566
+	attN = next,TRF.ShoulderPitch1_4294595566_0.225116|-0.0950340033|0.0235900003_0|0.674000025|0_0.225116|-0.0950340033|0.0235900003_0|0.674000025|0
+	attN = base,TRF.ShoulderRoll1_4294595674_0|0.00606600009|0.0781840011_0|0|-0.674000025_0|0.00606600009|0.0781840011_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFShoulderYaw1
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.ShoulderPitch1_4294595566
+	partName = Part
+	persistentId = 2183160104
+	pos = 1.12902153,13.9157734,1.10648561
+	attPos = 0,0,0
+	attPos0 = 0.231181994,-0.173217982,0.023590073
+	rot = 0.701057553,-0.430459112,-0.0922961533,0.560985625
+	attRot = 0,-0.707106709,0,0.707106709
+	attRot0 = 0.707106829,0,0,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.UpperBoom1_4294595512
+	attN = next,TRF.UpperBoom1_4294595512_0|0.165130004|-0.0862720087_0|0|0.674000025_0|0.165130004|-0.0862720087_0|0|0.674000025
+	attN = base,TRF.ShoulderYaw1_4294595620_-0.00606600009|0|0.0781840011_0|0|-0.674000025_-0.00606600009|0|0.0781840011_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFShoulderPitch1
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.UpperBoom1_4294595512
+	partName = Part
+	persistentId = 3851432770
+	pos = 1.09928775,13.976778,1.27999401
+	attPos = 0,0,0
+	attPos0 = 0,0.165129602,-0.0862719864
+	rot = 0.701057553,-0.430459112,-0.0922961533,0.560985625
+	attRot = 0,-0.707106769,0,0.707106769
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ElbowPitch1_4294595464
+	attN = next,TRF.ElbowPitch1_4294595464_0|0|-0.411814004_0|0|0.674000025_0|0|-0.411814004_0|0|0.674000025
+	attN = base,TRF.ShoulderPitch1_4294595566_0|0|0_0|0|-0.674000025_0|0|0_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = TRF.ElbowPitch1_4294595464
+	partName = Part
+	persistentId = 193025514
+	pos = 1.39020836,14.3208761,1.46430206
+	attPos = 0,0,0
+	attPos0 = 0,0.0141544975,-0.486627996
+	rot = -0.701057553,0.430459112,0.0922961533,-0.560985625
+	attRot = 0,0.707106709,0,-0.707106709
+	attRot0 = 0,0,0,-1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.LowerBoom1_4294595396
+	attN = next,TRF.LowerBoom1_4294595396_0|-0.167825997|-0.13143_0|0|0.674000025_0|-0.167825997|-0.13143_0|0|0.674000025
+	attN = base,TRF.UpperBoom1_4294595512_0|-0.0141540002|0.0748140067_0|0|-0.674000025_0|-0.0141540002|0.0748140067_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFElbowPitch1
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.LowerBoom1_4294595396
+	partName = Part
+	persistentId = 3200629833
+	pos = 1.83238065,14.7345581,1.52580035
+	attPos = 0,0,0
+	attPos0 = 2.98023295E-08,-0.167825609,-0.585032165
+	rot = 0.0922961235,0.560985923,0.701057374,0.430459142
+	attRot = 0,0.707106769,0,0.707106769
+	attRot0 = 0,-1,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.WristPitch1_4294595362
+	attN = next,TRF.ElbowPitch1_4294595464_0|0|-0.453601986_0|0|0.674000025_0|0|-0.453601986_0|0|0.674000025
+	attN = base,TRF.WristPitch1_4294595362_0|0|0_0|0|-0.674000025_0|0|0_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = TRF.WristPitch1_4294595362
+	partName = Part
+	persistentId = 129679009
+	pos = 1.88521159,14.7955618,1.55630231
+	attPos = 0,0,0
+	attPos0 = 0,0,0.0862722546
+	rot = 0.369643807,0.892399311,0.0990457311,0.239117414
+	attRot = 0.49999994,0.49999994,-0.49999994,0.49999994
+	attRot0 = 0.707106829,0,0,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.WristYaw1_4294595308
+	attN = next,TRF.WristYaw1_4294595308_-0.00606600009|0.0781840011|0.150976002_0|-0.674000025|0_-0.00606600009|0.0781840011|0.150976002_0|-0.674000025|0
+	attN = base,TRF.LowerBoom1_4294595396_0|-0.0862720087|0_0|0.674000025|0_0|-0.0862720087|0_0|0.674000025|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFWristPitch1
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.WristYaw1_4294595308
+	partName = Part
+	persistentId = 1982738193
+	pos = 2.0586946,14.9137564,1.50936854
+	attPos = 0,0,0
+	attPos0 = -0.00606599497,0.173218265,0.127386048
+	rot = -0.701057434,-0.430459291,0.0922962427,0.560985804
+	attRot = -0.999999881,0,0,0
+	attRot0 = -0.5,-0.5,-0.5,-0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.WristRoll1_4294595254
+	attN = next,TRF.WristRoll1_4294595254_0.00606600009|0.0781840011|0.225116_0|-0.674000025|0_0.00606600009|0.0781840011|0.225116_0|-0.674000025|0
+	attN = base,TRF.WristPitch1_4294595362_-0.0950340033|0.0235900003|0_0.674000025|0|0_-0.0950340033|0.0235900003|0_0.674000025|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFWristYaw1
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.WristRoll1_4294595254
+	partName = Part
+	persistentId = 175097480
+	pos = 2.02560878,15.0605478,1.29025221
+	attPos = 0,0,0
+	attPos0 = 0.00606629252,0.173217788,0.201526031
+	rot = 0.560985684,0.0922961831,0.430459321,0.701057315
+	attRot = 0,0,0,1
+	attRot0 = 1,0,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.OTCM1_4294595200
+	attN = next,TRF.OTCM1_4294595200_0.303299993|0|0_0.674000025|0|0_0.303299993|0|0_0.674000025|0|0
+	attN = base,TRF.WristYaw1_4294595308_0|0.0950340033|-0.0235900003_0|-0.674000025|0_0|0.0950340033|-0.0235900003_0|-0.674000025|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFWristRoll1
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.OTCM1_4294595200
+	partName = Part
+	persistentId = 3639729846
+	pos = 2.21134305,15.2750158,1.39748502
+	attPos = 0,0,0
+	attPos0 = 0.303300887,1.49011612E-07,-2.98023224E-08
+	rot = 0.800102949,0.191341996,-0.461939991,0.331413746
+	attRot = 0.49999994,-0.49999994,-0.49999994,0.49999994
+	attRot0 = 0.50000006,-0.5,-0.5,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = next,Null_0_0|0|-0.368004024_0|0|-0.674000025_0|0|-0.368004024_0|0|-0.674000025
+	attN = base,TRF.WristRoll1_4294595254_0|0|0_0|0|0.674000025_0|0|0_0|0|0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WireSnareLock
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			actionWireSnareLock
+			{
+				actionGroup = None
+			}
+			actionDockingPort
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		acquireForceTweak = 100
+		crossfeed = True
+		stagingEnabled = False
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+			}
+			ToggleXFeedAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = Ca2LeeCam
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.ShoulderBase2_4294591656
+	partName = Part
+	persistentId = 1525743170
+	pos = -0.404894263,13.7213259,0.0481047034
+	attPos = 0,0,0
+	attPos0 = -0.684784055,1.19209155E-07,0.986735404
+	rot = 0.0922958851,0.560985506,0.701057613,0.43045938
+	attRot = 0.707106709,0.707106709,0,0
+	attRot0 = 2.0116569E-07,-0.923879564,-1.49011626E-07,-0.382683426
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ShoulderRoll2_4294591610
+	attN = next,TRF.ShoulderRoll2_4294591610_0.0431360006|0|0_0.674000025|0|0_0.0431360006|0|0_0.674000025|0|0
+	attN = base,TRF.UpperStage_4294596584_0|0|0_-0.674000025|0|0_0|0|0_-0.674000025|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IkRobotController
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		activeControlPointName = _default
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10000
+		maxAmount = 10000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = TRF.ShoulderRoll2_4294591610
+	partName = Part
+	persistentId = 1056253478
+	pos = -0.431309611,13.7518282,0.0328537822
+	attPos = 0,0,0
+	attPos0 = 0.0431360006,0,0
+	rot = 0.0922958851,0.560985506,0.701057613,0.43045938
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ShoulderYaw2_4294591556
+	attN = next,TRF.ShoulderYaw2_4294591556_0.260163993|-0.0950340033|0.0235900003_0|0.674000025|0_0.260163993|-0.0950340033|0.0235900003_0|0.674000025|0
+	attN = base,TRF.ShoulderBase2_4294591656_0|0|0_-0.674000025|0|0_0|0|0_-0.674000025|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFShoulderRoll2
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.ShoulderYaw2_4294591556
+	partName = Part
+	persistentId = 1423397436
+	pos = -0.493286878,13.9567614,-0.202943802
+	attPos = 0,0,0
+	attPos0 = 0.266230017,-0.173217773,0.0235900208
+	rot = 0.239117593,-0.0990457609,-0.892399251,0.369643837
+	attRot = -0.49999994,0.49999994,-0.49999994,-0.49999994
+	attRot0 = 0.5,-0.5,-0.5,-0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ShoulderPitch2_4294591502
+	attN = next,TRF.ShoulderPitch2_4294591502_0.225116|-0.0950340033|0.0235900003_0|0.674000025|0_0.225116|-0.0950340033|0.0235900003_0|0.674000025|0
+	attN = base,TRF.ShoulderRoll2_4294591610_0|0.00606600009|0.0781840011_0|0|-0.674000025_0|0.00606600009|0.0781840011_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFShoulderYaw2
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.ShoulderPitch2_4294591502
+	partName = Part
+	persistentId = 1873559760
+	pos = -0.752725959,13.9157743,-0.325491369
+	attPos = 0,0,0
+	attPos0 = 0.231182009,-0.173217982,0.0235900879
+	rot = -0.0922960639,0.560985625,-0.701057434,0.430459499
+	attRot = 0,0.707106709,0,-0.707106709
+	attRot0 = -0.707106829,0,0,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.UpperBoom2_4294591448
+	attN = next,TRF.UpperBoom2_4294591448_0|0.165130004|-0.0862720087_0|0|0.674000025_0|0.165130004|-0.0862720087_0|0|0.674000025
+	attN = base,TRF.ShoulderYaw2_4294591556_-0.00606600009|0|0.0781840011_0|0|-0.674000025_-0.00606600009|0|0.0781840011_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFShoulderPitch2
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.UpperBoom2_4294591448
+	partName = Part
+	persistentId = 661584711
+	pos = -0.722991228,13.976778,-0.498999774
+	attPos = 0,0,0
+	attPos0 = 0,0.165129587,-0.0862719864
+	rot = -0.0922960639,0.560985625,-0.701057434,0.430459499
+	attRot = 0,0.707106709,0,-0.707106709
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.ElbowPitch2_4294591400
+	attN = next,TRF.ElbowPitch2_4294591400_0|0|-0.411814004_0|0|0.674000025_0|0|-0.411814004_0|0|0.674000025
+	attN = base,TRF.ShoulderPitch2_4294591502_0|0|0_0|0|-0.674000025_0|0|0_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = TRF.ElbowPitch2_4294591400
+	partName = Part
+	persistentId = 2552348748
+	pos = -1.01391256,14.3208761,-0.683307052
+	attPos = 0,0,0
+	attPos0 = -2.98023259E-08,0.014154451,-0.486628056
+	rot = -0.0922960639,0.560985625,-0.701057434,0.430459499
+	attRot = 0,0.707106709,0,-0.707106709
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.LowerBoom2_4294591332
+	attN = next,TRF.LowerBoom2_4294591332_0|-0.167825997|-0.13143_0|0|0.674000025_0|-0.167825997|-0.13143_0|0|0.674000025
+	attN = base,TRF.UpperBoom2_4294591448_0|-0.0141540002|0.0748140067_0|0|-0.674000025_0|-0.0141540002|0.0748140067_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFElbowPitch2
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.LowerBoom2_4294591332
+	partName = Part
+	persistentId = 2126794459
+	pos = -1.45608425,14.7345572,-0.744806409
+	attPos = 0,0,0
+	attPos0 = 2.98023295E-08,-0.167825624,-0.585032165
+	rot = -0.701057434,-0.430459499,0.0922960639,0.560985625
+	attRot = 0,0.707106769,0,0.707106769
+	attRot0 = 0,-1,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.WristPitch2_4294591298
+	attN = next,TRF.ElbowPitch2_4294591400_0|0|-0.453601986_0|0|0.674000025_0|0|-0.453601986_0|0|0.674000025
+	attN = base,TRF.WristPitch2_4294591298_0|0|0_0|0|-0.674000025_0|0|0_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = TRF.WristPitch2_4294591298
+	partName = Part
+	persistentId = 1327573548
+	pos = -1.50891483,14.7955618,-0.775308371
+	attPos = 0,0,0
+	attPos0 = 0,0,0.0862723142
+	rot = 0.0990457684,0.239117742,-0.369643956,-0.892399311
+	attRot = -0.49999994,-0.49999994,0.49999994,-0.49999994
+	attRot0 = -0.707106829,0,0,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.WristYaw2_4294591244
+	attN = next,TRF.WristYaw2_4294591244_-0.00606600009|0.0781840011|0.150976002_0|-0.674000025|0_-0.00606600009|0.0781840011|0.150976002_0|-0.674000025|0
+	attN = base,TRF.LowerBoom2_4294591332_0|-0.0862720087|0_0|0.674000025|0_0|-0.0862720087|0_0|0.674000025|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFWristPitch2
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.WristYaw2_4294591244
+	partName = Part
+	persistentId = 3699954383
+	pos = -1.68239725,14.9137564,-0.728375554
+	attPos = 0,0,0
+	attPos0 = -0.00606599543,0.17321834,0.127386093
+	rot = -0.0922958851,-0.560985744,-0.701057673,-0.43045947
+	attRot = -0.999999881,0,0,0
+	attRot0 = 0.5,0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.WristRoll2_4294591190
+	attN = next,TRF.WristRoll2_4294591190_0.00606600009|0.0781840011|0.225116_0|-0.674000025|0_0.00606600009|0.0781840011|0.225116_0|-0.674000025|0
+	attN = base,TRF.WristPitch2_4294591298_-0.0950340033|0.0235900003|0_0.674000025|0|0_-0.0950340033|0.0235900003|0_0.674000025|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFWristYaw2
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.WristRoll2_4294591190
+	partName = Part
+	persistentId = 727866201
+	pos = -1.64931154,15.0605469,-0.509258151
+	attPos = 0,0,0
+	attPos0 = 0.00606633723,0.173217744,0.201526076
+	rot = -0.430459529,-0.701057732,0.560985625,0.0922960043
+	attRot = 0,0,0,1
+	attRot0 = 1,0,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.OTCM2_4294591136
+	attN = next,TRF.OTCM2_4294591136_0.303299993|0|0_0.674000025|0|0_0.303299993|0|0_0.674000025|0|0
+	attN = base,TRF.WristYaw2_4294591244_0|0.0950340033|-0.0235900003_0|-0.674000025|0_0|0.0950340033|-0.0235900003_0|-0.674000025|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFWristRoll2
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.OTCM2_4294591136
+	partName = Part
+	persistentId = 779240133
+	pos = -1.83504617,15.275013,-0.616492033
+	attPos = 0,0,0
+	attPos0 = 0.303300858,1.49011612E-07,-5.96046448E-08
+	rot = 0.46194008,-0.331413746,0.800103426,0.191341683
+	attRot = 0.49999997,-0.49999997,-0.49999997,0.49999997
+	attRot0 = 0.50000006,-0.5,-0.5,0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = next,Null_0_0|0|-0.368004024_0|0|-0.674000025_0|0|-0.368004024_0|0|-0.674000025
+	attN = base,TRF.WristRoll2_4294591190_0|0|0_0|0|0.674000025_0|0|0_0|0|0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WireSnareLock
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			actionWireSnareLock
+			{
+				actionGroup = None
+			}
+			actionDockingPort
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		acquireForceTweak = 100
+		crossfeed = True
+		stagingEnabled = False
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+			}
+			ToggleXFeedAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = Ca2LeeCam
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.BodyRollJoint_4294586356
+	partName = Part
+	persistentId = 3971889176
+	pos = 0.188147306,13.5629349,0.39049685
+	attPos = 0,0,0
+	attPos0 = 0,0,1.14512646
+	rot = -0.353553593,0.612372339,-0.612372339,-0.353553593
+	attRot = 0.707106769,0,0,0.707106769
+	attRot0 = 0,-1.49011612E-08,0.707106769,0.707106888
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRF.LowerStage_4294587170
+	attN = next,TRF.LowerStage_4294587170_0|0|0.165804014_0|0|0.674000025_0|0|0.165804014_0|0|0.674000025
+	attN = base,TRF.UpperStage_4294596584_0|0|0_0|0|-0.674000025_0|0|0_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = IRServoMinimal
+		isEnabled = True
+		servoName = TRFBodyRollJoint
+		pitchSet = 1
+		soundSet = 0.5
+		freeMoving = False
+		isMotionLock = False
+		limitTweakable = False
+		limitTweakableFlag = False
+		maxTweak = 360
+		minTweak = 0
+		rotateLimits = False
+		rotateMax = 360
+		rotateMin = 0
+		rotation = 0
+		translateMax = 3
+		translateMin = 0
+		translation = 0
+		defaultPosition = 0
+		customSpeed = 1
+		invertAxis = False
+		torqueMax = 30
+		torqueTweak = 1
+		speedTweak = 1
+		accelTweak = 4
+		presetPositionsSerialized = 
+		groupName = New Group
+		forwardKey = 
+		reverseKey = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MotionLockToggle
+			{
+				actionGroup = None
+			}
+			MoveNextPresetAction
+			{
+				actionGroup = None
+			}
+			MovePrevPresetAction
+			{
+				actionGroup = None
+			}
+			MovePlusAction
+			{
+				actionGroup = None
+			}
+			MoveMinusAction
+			{
+				actionGroup = None
+			}
+			MoveCenterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = TRF.LowerStage_4294587170
+	partName = Part
+	persistentId = 4285615252
+	pos = 0.188147306,13.397131,0.39049685
+	attPos = 0,0,0
+	attPos0 = 3.49405416E-09,6.39465758E-10,0.165803745
+	rot = 0.683012843,-0.183012426,0.183012426,0.683012843
+	attRot = -0.49999994,-0.49999994,0.49999994,-0.49999994
+	attRot0 = 6.66133815E-16,-1.49011612E-08,0.707106829,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = TRFCA2LEEwCam_4294585266
+	attN = next,TRFCA2LEEwCam_4294585266_0|0|0.586380005_0|0|0.674000025_0|0|0.586380005_0|0|0.674000025
+	attN = base,TRF.BodyRollJoint_4294586356_0|0|0_0|0|-0.674000025_0|0|0_0|0|-0.674000025
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = TRFCA2LEEwCam_4294585266
+	partName = Part
+	persistentId = 1503780319
+	pos = 0.188146934,12.81075,0.390497267
+	attPos = 0,0,0
+	attPos0 = 1.03337572E-09,7.10542439E-15,0.586380005
+	rot = -0.991444945,-2.36437732E-08,0.13052687,-1.81425044E-08
+	attRot = 0.382683218,0,-0.923879623,0
+	attRot0 = -0.65328145,0.270598203,0.270598203,-0.65328145
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = top,Null_0_0|0.361199975|0_0|1.03199995|0_0|0.361199975|0_0|1.03199995|0
+	attN = bottom,TRF.LowerStage_4294587170_0|0|0_0|-1.03199995|0_0|0|0_0|-1.03199995|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WireSnareLock
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			actionWireSnareLock
+			{
+				actionGroup = None
+			}
+			actionDockingPort
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = Ca2LeeCam
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		activeControlPointName = _default
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		acquireForceTweak = 100
+		crossfeed = True
+		stagingEnabled = False
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+			}
+			ToggleXFeedAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = False
+		animTime = 1
+		animSpeed = 10
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 10000
+		maxAmount = 10000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
