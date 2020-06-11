@@ -26,6 +26,9 @@ namespace CA2_LEE_CAM
         public float fieldOfView = 60f;
 
         [KSPField(isPersistant = false)]
+        public float nearClipPlane = 0.0f;
+
+        [KSPField(isPersistant = false)]
         public bool changeableFieldOfView = false;
 
         [KSPField(isPersistant = false)]
@@ -37,6 +40,13 @@ namespace CA2_LEE_CAM
         [KSPField(isPersistant = false)]
         public string hudTextureFile = "leehud real.png";
         #endregion module variable of part.cfg
+
+        private enum KSPLayers
+        {
+            Default, TransparentFX, IgnoreRaycast, none3, Water, UI, none6, none7, PartsListIcons, Atmosphere, ScaledScenery, UIDialog, UIVectors, UIMask, Screens, LocalScenery,
+            kerbals, EVA, SkySphere, PhysicalObjects, InternalSpace, PartTriggers, KerbalInstructors, AeroFXIgnore, MapFX, UIAdditional, WheelCollidersIgnore, WheelColliders,
+            TerrainColliders, none29, none30, Vectors
+        }
 
         protected static int NextWindowID = 100;
         protected int WindowID = 0;
@@ -67,18 +77,20 @@ namespace CA2_LEE_CAM
 
         public bool[] enabling = new bool[9];
 
-        //[LOG 21:04:00.375] [TRF CLC] KSP camera[0].GalaxyCamera
-        //[LOG 21:04:00.375] [TRF CLC] KSP camera[1].Camera ScaledSpace
-        //[LOG 21:04:00.375] [TRF CLC] KSP camera[2].Camera 01
-        //[LOG 21:04:00.376] [TRF CLC] KSP camera[3].Camera 00
-        //[LOG 21:04:00.376] [TRF CLC] KSP camera[4].Canvas Camera
-        //[LOG 21:04:00.376] [TRF CLC] KSP camera[5].FXCamera
-        //[LOG 21:04:00.376] [TRF CLC] KSP camera[6].UIVectorCamera
-        //[LOG 21:04:00.376] [TRF CLC] KSP camera[7].Camera
-        //[LOG 21:04:00.376] [TRF CLC] KSP camera[8].velocity camera
+        // KSP camera[0].GalaxyCamera
+        // KSP camera[1].Camera ScaledSpace
+        // KSP camera[2].Camera 00
+        // KSP camera[3].Canvas Camera
+        // KSP camera[4].FXDepthCamera
+        // KSP camera[5].FXCamera
+        // KSP camera[6].UIVectorCamera
+        // KSP camera[7].Camera
+        // KSP camera[8].velocity camera
 
         private readonly string[] knownCameraNames =
         {
+            /*
+            // 1.7.1 and previous
             "GalaxyCamera",
             "Camera ScaledSpace",
             "Camera VE Underlay", // Environmental Visual Enhancements plugin camera
@@ -86,6 +98,17 @@ namespace CA2_LEE_CAM
             "Camera 01",
             "Camera 00",
             "FXCamera"
+            */
+
+            "GalaxyCamera",
+            "Camera ScaledSpace",
+            "Camera 00",
+            "Canvas Camera",
+            "FXDepthCamera",
+            "FXCamera",
+            "UIVectorCamera"
+             //"Camera",
+             //"velocity camera"
 
             //"GalaxyCamera",
             //"Camera ScaledSpace",
@@ -322,7 +345,7 @@ namespace CA2_LEE_CAM
                 //AddOutputValue(inputRect, "eePosition", eeCamera.transform.position, 110f, 110f);
                 //AddOutputValue(inputRect, "eeRotation", eeCamera.transform.rotation.eulerAngles, 110f, 110f);
 
-                //// blocking camera layers
+                // blocking camera layers
                 //for (int i = 0; i < knownCameraNames.Length; i++)
                 //{
                 //    enabling[i] = GUI.Toggle(new Rect(30, 40 + (float)i * 20, 200, 20), enabling[i], " " + knownCameraNames[i]);
@@ -378,9 +401,11 @@ namespace CA2_LEE_CAM
 
         protected virtual void InitCameras()
         {
-            //for (int i = 0; i < UnityEngine.Camera.allCameras.Length; i++)
-            //    Debug.Log(string.Format("[TRF CLC] KSP camera[{0}]." + UnityEngine.Camera.allCameras[i].name, i));
+            // list all camera
+            for (int i = 0; i < UnityEngine.Camera.allCameras.Length; i++)
+                Debug.Log(string.Format("[TRF CLC] KSP camera[{0}]." + UnityEngine.Camera.allCameras[i].name, i));
 
+            // setup all 'know' camera
             for (int i = 0; i < knownCameraNames.Length; ++i)
             {
                 CameraSetup(i, knownCameraNames[i]);
@@ -417,18 +442,110 @@ namespace CA2_LEE_CAM
                 cameraBody.name = typeof(Ca2LeeCam).Name + index + cameraBody.GetInstanceID();
                 cameraObject[index] = cameraBody.AddComponent<Camera>();
 
-                //Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".cullingMask {1}", 50, sourceCam.cullingMask));
+                cameraObject[index].CopyFrom(sourceCam);
+
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".cullingMask {1}", 50, sourceCam.cullingMask));
+                for (int i = 0; i < 32; i++)
+                {
+                    if (((1 << i) & sourceCam.cullingMask) != 0)
+                    {
+                        Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".Layers {1}", 50, (KSPLayers)i));
+                    }
+                }
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".fieldOfView " + sourceCam.fieldOfView.ToString(), 50));
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".actualRenderingPath " + sourceCam.actualRenderingPath.ToString(), 50));
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".RenderingPath " + sourceCam.renderingPath.ToString(), 50));
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".useOcclusionCulling " + sourceCam.useOcclusionCulling.ToString(), 50));
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".nearClipPlane {1}", 50, sourceCam.nearClipPlane));
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".farClipPlane {1}", 50, sourceCam.farClipPlane));
+
+                // decoding Layers from cullingMask
+
+                // GalaxyCamera.cullingMask 262144
+                // GalaxyCamera.Layers SkySphere
+                // GalaxyCamera.fieldOfView 60
+                // GalaxyCamera.actualRenderingPath Forward
+                // GalaxyCamera.RenderingPath UsePlayerSettings
+                // GalaxyCamera.useOcclusionCulling True
+                // GalaxyCamera.nearClipPlane 0.1
+                // GalaxyCamera.farClipPlane 20
+                // 50 END CameraSetup Ca2LeeCam0-322108.GalaxyCamera
+
+                // Camera ScaledSpace.cullingMask 1536
+                // Camera ScaledSpace.Layers Atmosphere
+                // Camera ScaledSpace.Layers ScaledScenery
+                // Camera ScaledSpace.fieldOfView 60
+                // Camera ScaledSpace.actualRenderingPath Forward
+                // Camera ScaledSpace.RenderingPath UsePlayerSettings
+                // Camera ScaledSpace.useOcclusionCulling True
+                // Camera ScaledSpace.nearClipPlane 1
+                // Camera ScaledSpace.farClipPlane 3E+07
+                // 50 END CameraSetup Ca2LeeCam1-322114.Camera ScaledSpace
+
+                // Camera 00.cullingMask 9076755
+                // Camera 00.Layers Default
+                // Camera 00.Layers TransparentFX
+                // Camera 00.Layers Water
+                // Camera 00.Layers LocalScenery
+                // Camera 00.Layers EVA
+                // Camera 00.Layers PhysicalObjects
+                // Camera 00.Layers AeroFXIgnore
+                // Camera 00.fieldOfView 60
+                // Camera 00.actualRenderingPath Forward
+                // Camera 00.RenderingPath UsePlayerSettings
+                // Camera 00.useOcclusionCulling True
+                // Camera 00.nearClipPlane 0.21
+                // Camera 00.farClipPlane 750000
+                // 50 END CameraSetup Ca2LeeCam2-322120.Camera 00
+
+                // 51 Fail CameraSetup Canvas Camera
+                // FXDepthCamera.cullingMask 131073
+                // FXDepthCamera.Layers Default
+                // FXDepthCamera.Layers EVA
+                // FXDepthCamera.fieldOfView 60
+                // FXDepthCamera.actualRenderingPath Forward
+                // FXDepthCamera.RenderingPath UsePlayerSettings
+                // FXDepthCamera.useOcclusionCulling True
+                // FXDepthCamera.nearClipPlane 0.55
+                // FXDepthCamera.farClipPlane 300
+                // 50 END CameraSetup Ca2LeeCam4-322126.FXDepthCamera
+
+                // FXCamera.cullingMask 131073
+                // FXCamera.Layers Default
+                // FXCamera.Layers EVA
+                // FXCamera.fieldOfView 60
+                // FXCamera.actualRenderingPath Forward
+                // FXCamera.RenderingPath UsePlayerSettings
+                // FXCamera.useOcclusionCulling True
+                // FXCamera.nearClipPlane 0.55
+                // FXCamera.farClipPlane 300
+                // 50 END CameraSetup Ca2LeeCam5-322132.FXCamera
+
+                // UIVectorCamera.cullingMask 4096
+                // UIVectorCamera.Layers UIVectors
+                // UIVectorCamera.fieldOfView 60
+                // UIVectorCamera.actualRenderingPath Forward
+                // UIVectorCamera.RenderingPath UsePlayerSettings
+                // UIVectorCamera.useOcclusionCulling True
+                // UIVectorCamera.nearClipPlane 0.1
+                // UIVectorCamera.farClipPlane 1000
+                // 50 END CameraSetup Ca2LeeCam6-322138.UIVectorCamera
 
                 // Just in case to support JSITransparentPod.
-                cameraObject[index].cullingMask &= ~(1 << 16 | 1 << 20);
-                
-                cameraObject[index].CopyFrom(sourceCam);
+                //cameraObject[index].cullingMask &= ~(1 << 16 | 1 << 20);
+
+                //cameraObject[index].cullingMask = (1 << 0) | (1 << 4) | (1 << 9) | (1 << 10) | (1 << 15) | (1 << 16) | (1 << 18) | (1 << 23);
+
+                // Set nearClipPlane of 'Camera 00'
+                if (index == 2)
+                {
+                    cameraObject[index].nearClipPlane = nearClipPlane;
+                }
+
                 cameraObject[index].enabled = false;
                 cameraObject[index].aspect = cameraAspect;
                 cameraObject[index].fieldOfView = fieldOfView;
                 cameraObject[index].rect = new Rect(0, 0, 4.01f, 3.01f);
-
-                //Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".fieldOfView " + sourceCam.fieldOfView.ToString(), 50));
 
                 // Minor hack to bring the near clip plane for the "up close"
                 // cameras drastically closer to where the cameras notionally
@@ -436,16 +553,12 @@ namespace CA2_LEE_CAM
                 // or 750:1 Far/Near ratio.  Changing this to 8192:1 brings the
                 // near plane to 37cm or so, which hopefully is close enough to
                 // see nearby details without creating z-fighting artifacts.
-                if (index == 5 || index == 6)
-                {
-                    cameraObject[index].nearClipPlane = cameraObject[index].farClipPlane / 8192.0f;
-                }
+                //if (index == 5 || index == 6)
+                //{
+                //    cameraObject[index].nearClipPlane = cameraObject[index].farClipPlane / 8192.0f;
+                //}
 
-                //Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".actualRenderingPath " + sourceCam.actualRenderingPath.ToString(), 50));
-                //Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".RenderingPath " + sourceCam.renderingPath.ToString(), 50));
-                //Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".useOcclusionCulling " + sourceCam.useOcclusionCulling.ToString(), 50));
-                //Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".nearClipPlane {1}", 50, sourceCam.nearClipPlane));
-                //Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".farClipPlane {1}", 50, sourceCam.farClipPlane));
+                Debug.Log(string.Format("[TRF CLC] {0} " + sourceName + ".NEW.nearClipPlane {1}", 50, cameraObject[index].nearClipPlane));
 
                 Debug.Log(string.Format("[TRF CLC{1}] {0} END CameraSetup " + cameraBody.name + "." + sourceName, 50, WindowID));
             }
